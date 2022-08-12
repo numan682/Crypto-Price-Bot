@@ -26,7 +26,7 @@ def getPrice(msg):
     if len(symbol) == 1:
         bot.send_message(msg.chat.id, '*Example : /p BTC*', parse_mode='markdown')
         return
-    try:
+    try: 
         symbol_ = symbol[1].upper()
         result = client.get_ticker(symbol = f'{symbol_}USDT')
         current_price = result['lastPrice']
